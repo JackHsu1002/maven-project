@@ -3,6 +3,7 @@ pipeline {
     tools{
         maven 'local maven'
     }
+    
     stages{
         stage('Build'){
             steps {
@@ -10,7 +11,7 @@ pipeline {
             }
             post {
                 success {
-                    echo '開始存擋...'
+                    echo '开始存档....'
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
             }
