@@ -14,6 +14,9 @@ pipeline {
                     echo '开始存档....'
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
+                error {
+                    echo '失敗了QQ...'
+                }    
             }
         }
     }
